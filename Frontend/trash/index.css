@@ -1,0 +1,144 @@
+CSS Variables :root {
+  --font-family: "Arial", sans-serif;
+  --background-color: #f4f4f9;
+  --primary-color: #007bff;
+  --primary-color-hover: #0056b3;
+  --text-color: #333;
+  --subtitle-color: #666;
+  --border-color: #ddd;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --error-color: red;
+  --tech-item-bg-even: #e9ecef;
+  --tech-item-bg-odd: #f8f9fa;
+  --tech-item-bg: #f0f0f0;
+  --font-size-large: 2.5rem;
+  --font-size-medium: 1.1rem;
+  --font-size-normal: 1rem;
+  --font-size-small: 16px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App container */
+.app-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Header section */
+.header h1 {
+  font-size: var(--font-size-large);
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.header .subtitle {
+  font-size: var(--font-size-medium);
+  color: var(--subtitle-color);
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  width: 250px;
+  font-size: var(--font-size-normal);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--font-size-normal);
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Error message */
+.error {
+  color: var(--error-color);
+  margin-top: 10px;
+  font-size: var(--font-size-normal);
+}
+
+/* Result section */
+.result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tech-item {
+  background-color: var(--tech-item-bg);
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: var(--font-size-normal);
+}
+
+.tech-item:nth-child(even) {
+  background-color: var(--tech-item-bg-even);
+}
+
+.tech-item:nth-child(odd) {
+  background-color: var(--tech-item-bg-odd);
+}
+
+/* Footer */
+footer p {
+  font-size: var(--font-size-small);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color-hover);
+}
